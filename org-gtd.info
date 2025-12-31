@@ -3374,6 +3374,17 @@ are ready...
      side window.  If the above variable is nil, then the horizons
      window will be toggled on the right side of the screen.
 
+     If your Emacs configuration or distribution doesn't enable
+     ‘global-visual-line-mode’ by default, you may consider adding the
+     following line at the beginning of the file containing your
+     longer-term horizons:
+
+          # -*- eval: (visual-line-mode 1); -*-
+
+     The horizons window is narrow and enabling ‘visual-line-mode’
+     locally will make sure that your horizons are easily readable
+     during the clarification process.
+
      *See also*:
         • *note Configuration Variables Reference:: for
           ‘org-gtd-areas-of-focus’, ‘org-gtd-horizons-file’, and
@@ -7620,7 +7631,7 @@ File: org-gtd.info,  Node: Project Management Commands,  Next: Task Dependency C
         • Prompts you to confirm or update each type-specific property
         • Example: "Delegated to [Jane Smith]: " lets you keep Jane or
           enter someone new
-        • Example: "Scheduled _[2025-03-15 Sat]_: " lets you update the
+        • Example: "Scheduled _[2025-03-15 sáb]_: " lets you update the
           date
 
      *For projects:*
