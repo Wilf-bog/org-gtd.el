@@ -1035,6 +1035,8 @@ This is your daily engagement view - it shows *only* what you can act on right n
 
 *** Step 5: Complete the First Task
 
+Let's say that we just finished the reviewing our blueprints for the small house renovation project and that we are moving back to emacs to update our project.
+
 In the agenda view, move your cursor to "Review blueprints".
 
 Press *t* to cycle the TODO state.
@@ -1053,6 +1055,8 @@ You'll now see:
 - ✓ "Review blueprints" is DONE (depending on your agenda settings, it may be hidden)
 - *NEXT: Order windows of the right size* - Now actionable!
 - "Schedule carpenter" is still TODO - waiting for "Order windows" to complete
+
+  In a real life scenario, we would automatically know what's the next part of the project without having to go back to the larger project view and having to face all the tasks to do.
 
 *** What Just Happened?
 
@@ -1082,7 +1086,7 @@ Complete "Order windows" the same way:
 3. When done, press *t* and select *DONE*
 4. Watch "Schedule carpenter" automatically become NEXT
 
-When all tasks are done, the project is complete. You can archive it with ~M-x org-gtd-archive-completed-items~ during your weekly review.
+When all tasks are done, the project is complete. You can archive it with ~M-x org-gtd-archive-completed-items~ during your weekly review, as proposed in the GTD book. This is also important to make sure your project list stays manageable in the long-term.
 
 *** Key Takeaways
 
