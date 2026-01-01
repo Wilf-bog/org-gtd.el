@@ -1326,7 +1326,9 @@ These three scenarios need different views. The engage view shows *everything ac
 
 Let's start with the most immediately useful view: tasks under 15 minutes.
 
-Try this right now in your ~*scratch*~ buffer:
+Look into your list of next tasks which of them can be done quickly and add an effort estimate to them by using the Org command ~org-clock-modify-effort-estimate~, bound by default to ~C-c C-x e~. You can simply write 5min or any other time that you think is necessary.
+
+Once you have a few tasks with an effort estimate lower than 15min, try this in your ~*scratch*~ buffer:
 
 #+begin_src emacs-lisp
 (org-gtd-view-show
@@ -1352,8 +1354,8 @@ The pattern is simple:
 #+end_src
 
 Time formats work how you'd expect:
-- ~"15min"~ or ~"0:15"~ → 15 minutes
-- ~"1:30"~ or ~"1h30min"~ → 1 hour 30 minutes
+- ~"15"~ , ~"15min"~ or ~"0:15"~ → 15 minutes
+- ~"90"~ , ~"1:30"~ or ~"1h30min"~ → 1 hour 30 minutes
 - ~"2:00"~ or ~"2h"~ → 2 hours
 
 *The mental model:* Think of effort as "how big is this bite?" Quick wins are small bites. Deep work is a full meal.
@@ -1361,7 +1363,7 @@ Time formats work how you'd expect:
 *** Building a Focus Work View
 
 Now let's create a view for when you have real time to focus. You want tasks that:
-- Are important (priority A or B)
+- Are important (priority A or B) (using ~org-priority~, bound by default to ~C-c ,~)
 - Are substantial (over 30 minutes)
 
 #+begin_src emacs-lisp
