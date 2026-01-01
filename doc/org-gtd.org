@@ -168,7 +168,7 @@ The old ~org-gtd-incubate~ command still works as an alias to ~org-gtd-tickler~ 
 - *Better stuck project detection* - Improved identification of projects that need attention
 
 ** Simplified configuration
-- *org-gtd-mode has a new purpose* - The mode is no longer about wrapping agenda commands. It now provides a mode-line indicator showing your inbox count (e.g., =GTD[5]=), giving you at-a-glance visibility into how many items need processing.
+- *org-gtd-mode has a new purpose* - The mode is no longer about wrapping agenda commands. It now provides a mode line indicator showing your inbox count (e.g., =GTD[5]=), giving you at-a-glance visibility into how many items need processing.
 
 ** Per-type refile prompting
 You can now control refile prompting behavior for each GTD item type independently:
@@ -343,10 +343,10 @@ After completing the upgrade, you must set ~org-gtd-update-ack~ to suppress the 
 
 **** org-gtd-mode has a new purpose
 
-The ~org-gtd-mode~ minor mode has been redesigned in version 4.0. It no longer wraps org-agenda commands—instead, it provides useful mode-line feedback.
+The ~org-gtd-mode~ minor mode has been redesigned in version 4.0. It no longer wraps org-agenda commands—instead, it provides useful mode line feedback.
 
 *What it does now:*
-- Displays inbox count in your mode-line (e.g., =GTD[5]=)
+- Displays inbox count in your mode line (e.g., =GTD[5]=)
 - Includes items from both main inbox and additional inbox files
 - Refreshes periodically to catch external file changes
 
@@ -392,7 +392,7 @@ You need to configure three things for org-gtd to work:
 
 See the configuration sections below for details.
 
-*Optional*: Enable ~org-gtd-mode~ if you want to see your inbox count in the mode-line (e.g., =GTD[5]=).
+*Optional*: Enable ~org-gtd-mode~ if you want to see your inbox count in the mode line (e.g., =GTD[5]=).
 
 *** Complete Configuration Examples
 
@@ -4039,7 +4039,7 @@ See [[#controlling-refile-prompts][Controlling Refile Prompts by Item Type]] for
 
 See [[#controlling-refile-prompts][Controlling Refile Prompts by Item Type]] for detailed examples.
 
-*** Mode-Line Configuration
+*** Mode line Configuration
 
 **** ~org-gtd-mode-update-interval~
 
@@ -4049,11 +4049,11 @@ See [[#controlling-refile-prompts][Controlling Refile Prompts by Item Type]] for
 
 *Description*: Seconds between automatic inbox count refreshes when ~org-gtd-mode~ is enabled.
 
-The mode-line lighter (e.g., =GTD[5]=) updates automatically when Emacs redraws the mode-line. This setting controls an additional periodic refresh to catch external file changes (like mobile app syncs).
+The mode line lighter (e.g., =GTD[5]=) updates automatically when Emacs redraws the mode line. This setting controls an additional periodic refresh to catch external file changes (like mobile app syncs).
 
 Values:
 - Integer :: Refresh every N seconds
-- ~nil~ :: Disable periodic refresh (count still updates on mode-line redraw)
+- ~nil~ :: Disable periodic refresh (count still updates on mode line redraw)
 
 *Example*: Refresh every 30 seconds:
 #+begin_src emacs-lisp
@@ -6044,14 +6044,14 @@ These commands create GTD items programmatically (useful for automation and Emac
 - Safe to run multiple times
 - See [[#upgrading][Upgrading section]] for complete details
 
-*** Mode-Line Integration
+*** Mode line Integration
 
 **** ~org-gtd-mode~
 
 *Type*: Global minor mode
 
 *What it does*:
-- Displays inbox count in mode-line (e.g., =GTD[5]=)
+- Displays inbox count in mode line (e.g., =GTD[5]=)
 - Counts items across main inbox and additional inbox files
 - Refreshes periodically to catch external file changes
 - Enables org-edna for task dependencies
