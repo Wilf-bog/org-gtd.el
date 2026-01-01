@@ -793,12 +793,11 @@ To see org-gtd items in your agenda views, add the org-gtd directory to your ~or
 ;; Or if you have other agenda files, add GTD to the list:
 (add-to-list 'org-agenda-files org-gtd-directory)
 #+end_src
-*** configuration options for org-gtd
+*** Configuration options for org-gtd
 **** I don't care, just let me start using it
 The most direct way to find out about the configuration options for org-gtd is to see the customize group: ~M-x customize-group RET org-gtd~. They are all optional because they all come with default values.
 
-The only one you may want to change before starting to use Org GTD is ~org-gtd-directory~, which is the directory that Org GTD
-will look to for everything it needs to do.
+The only one you may want to change before starting to use org-gtd is ~org-gtd-directory~, which is the directory that org-gtd will look to for everything it needs to do.
 
 The configuration options will also be mentioned in the relevant subsections of [[#using-org-gtd][Using Org GTD]].
 **** Tell me all the levers I can pull
@@ -828,7 +827,7 @@ These settings are *required* for Org GTD to work properly:
           (sequence "TODO(t)" "NEXT(n)" "WAIT(w)" "|" "DONE(D)" "CNCL(c)")))  ; GTD
   #+end_src
 
-- ~org-gtd-keyword-mapping~ :: Map GTD semantic states to your chosen keywords. This tells Org GTD which keyword means what. The five required mappings are.
+- ~org-gtd-keyword-mapping~ :: Map GTD semantic states to your chosen keywords. This tells org-gtd which keyword means what. The five required mappings are.
   - ~todo~ :: Tasks not ready to be acted upon
   - ~next~ :: Tasks ready to act on immediately
   - ~wait~ :: Tasks blocked or delegated to someone else
@@ -857,7 +856,7 @@ These settings are *required* for Org GTD to work properly:
 
 ***** Optional configuration
 
-- ~org-gtd-directory~ :: set this to a directory. =org-gtd= will look for all its files in this directory.
+- ~org-gtd-directory~ :: set this to a directory. Org-gtd will look for all its files in this directory.
 - ~org-gtd-capture-templates~ :: (!note: take care when changing this) This defines the pre-filled text that will show up when capturing an item to the inbox. The only requirements are that the template string must define an org-mode top-level heading, and that the entry point to the inbox.  That is to say, the first two characters must be a single asterisk followed by a space: ~"* "~, and the entry type must be like this: =entry  (file ,#'org-gtd-inbox-path)=. [[#adding-things-to-the-inbox][Adding things to the inbox]].
 - ~org-reverse-note-order~ :: (=org-mode= variable) set this to ~t~ to add new items to the top of project tasks and to ~nil~ to add new items to the bottom of project tasks when organizing an item as such.
 - ~org-gtd-organize-hooks~ :: this is a list of functions that you can use to decorate each item when you clarify it. For instance, you could add a function to set the effort, or the priority, or some category, etc. By default it has only one function, which lets you add tags, but of course you can change this entirely. [[#organizing-an-item][Organizing an item]].
@@ -1496,7 +1495,7 @@ For complete filter syntax and all options, see [[#view-dsl-reference][View DSL 
 - [[#reference][Reference]] - Complete documentation for configuration, commands, properties, views, and hooks
 - [[#troubleshooting][Troubleshooting]] - Solutions to common problems
 
-* Using Org GTD
+* Using org-gtd
 :PROPERTIES:
 :DESCRIPTION: How Org GTD maps to the GTD flow
 :CUSTOM_ID: using-org-gtd
@@ -1553,7 +1552,7 @@ Here are the domain elements of GTD that we handle:
 
 The trip through GTD arguably begins by adding things to the inbox. The inbox is a file called ~inbox.org~ in the directory stored in the variable ~org-gtd-directory~. By default this means the file will be ~~/gtd/inbox.org~.
 
-Org GTD provides one function to capture items: ~M-x org-gtd-capture~. In my setup I have this bound globally as such:
+Org-gtd provides one function to capture items: ~M-x org-gtd-capture~. In my setup I have this bound globally as such:
 
 #+begin_src elisp
 (global-set-key "C-c d c" #'org-gtd-capture)
@@ -1589,7 +1588,7 @@ Besides ending up in here automatically while processing the inbox, there's two 
 - ~org-gtd-clarify-item~ :: call this from any org-mode heading to do a one-off clarification.
 - ~org-gtd-clarify-agenda-item~ :: call this from the agenda view, if you have anything you want to re-clarify, or possibly clarify for the first time, from somewhere outside the inbox.
 
-**** data shape requirements
+**** Data shape requirements
 :PROPERTIES:
 :CUSTOM_ID: data-shape-requirement-while-clarifying
 :END:
@@ -1640,7 +1639,7 @@ If you are clarifying a project, you may be interested in project templates:
 :PROPERTIES:
 :CUSTOM_ID: organizing-an-item
 :END:
-When you are done clarifying, call ~M-x org-gtd-organize~ (or hit your keybinding for it, see [[#recommended-key-bindings][Recommended key bindings]]). This will open a transient menu to let you choose how Org GTD should categorize this item.
+When you are done clarifying, call ~M-x org-gtd-organize~ (or hit your keybinding for it, see [[#recommended-key-bindings][Recommended key bindings]]). This will open a transient menu to let you choose how org-gtd should categorize this item.
 
 Organizing is broken up into three steps:
 - Choosing a task type (see [[#understanding-gtd-item-types][Understanding GTD Item Types]])
